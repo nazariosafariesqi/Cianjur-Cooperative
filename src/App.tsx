@@ -9,7 +9,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServicesPage from "@/pages/Services";
 import HomePage from "@/pages/Home";
-
+import ContactPage from "@/pages/Contact";
 
 
 const queryClient = new QueryClient();
@@ -25,6 +25,7 @@ const App = () => (
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang" element={<AboutPage />} />
           <Route path="/layanan" element={<ServicesPage />} />
+          <Route path="/kontak" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         </Routes>

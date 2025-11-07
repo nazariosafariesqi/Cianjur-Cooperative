@@ -7,7 +7,7 @@ const navItems = [
   { name: "Beranda", href: "/" },
   { name: "Tentang", href: "/tentang" },
   { name: "Layanan", href: "/layanan" },
-  { name: "Kontak", href: "#contact" },
+  { name: "Kontak", href: "/kontak" },
 ];
 
 const Navigation = () => {
