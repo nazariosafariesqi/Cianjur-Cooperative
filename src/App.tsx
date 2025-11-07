@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AboutPage from "./pages/About";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -14,11 +17,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <Navigation /> {/* Tetap tampil di semua halaman */}
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/tentang" element={<AboutPage />} />
           <Route path="*" element={<NotFound />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         </Routes>
+      <Footer /> {/* Tetap tampil di semua halaman */}
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

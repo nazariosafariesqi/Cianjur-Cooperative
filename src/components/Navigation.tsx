@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "Beranda", href: "#hero" },
-  { name: "Tentang", href: "#about" },
+  { name: "Tentang", href: "/tentang" },
   { name: "Layanan", href: "#services" },
   { name: "Keanggotaan", href: "#membership" },
   { name: "Berita", href: "#newsletter" },
@@ -73,17 +74,16 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  activeSection === item.href.replace("#", "")
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted"
-                }`}
+              <Link
+              to={item.href}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+              location.pathname === item.href
+              ? "bg-primary text-primary-foreground"
+              : "text-foreground hover:bg-muted"
+              }`}
               >
-                {item.name}
-              </button>
+              {item.name}
+              </Link>
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
@@ -107,17 +107,13 @@ const Navigation = () => {
           <div className="md:hidden bg-background border-t animate-fade-in">
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className={`block w-full text-left px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                    activeSection === item.href.replace("#", "")
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-muted"
-                  }`}
+                <Link
+                to={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left px-4 py-3 rounded-md text-sm font-medium transition-colors"
                 >
-                  {item.name}
-                </button>
+                {item.name}
+                </Link>
               ))}
               <div className="px-4 pt-2">
                 <Button
