@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import ServicesPage from "@/pages/Services";
 import HomePage from "@/pages/Home";
 import ContactPage from "@/pages/Contact";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 
 const queryClient = new QueryClient();
@@ -20,7 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-      <Navigation /> {/* Tetap tampil di semua halaman */}
+      <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang" element={<AboutPage />} />
@@ -29,7 +30,8 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         </Routes>
-      <Footer /> {/* Tetap tampil di semua halaman */}
+      <Footer />
+      <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
