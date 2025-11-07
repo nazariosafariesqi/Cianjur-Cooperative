@@ -41,7 +41,7 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Layanan Kami</span>
+            <span className="text-gradient">Unit Usaha Kami</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Berbagai produk dan layanan keuangan yang dirancang khusus untuk memenuhi kebutuhan anggota koperasi

@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 text-primary">Koperasi Cianjur</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary">Koperasi Sugih Jembar Rahayu</h3>
             <p className="text-accent-foreground/80 mb-6 leading-relaxed">
               Bersama membangun kesejahteraan melalui kekuatan gotong royong dan kepercayaan. Melayani dengan sepenuh hati sejak 2008.
             </p>

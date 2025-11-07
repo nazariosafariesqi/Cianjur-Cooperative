@@ -4,9 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "Beranda", href: "/" },
-  { name: "Tentang", href: "/tentang" },
-  { name: "Layanan", href: "/layanan" },
-  { name: "Kontak", href: "/kontak" },
+  { name: "Tentang Kami", href: "/tentang" },
+  { name: "Unit Usaha", href: "/layanan" },
+  { name: "Hubungi Kami", href: "/kontak" },
 ];
 
 const Navigation = () => {
@@ -33,7 +33,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="text-xl md:text-2xl font-bold text-gradient">
-            Koperasi Cianjur
+            Koperasi Sugih Jembar Rahayu
           </div>
 
           {/* Desktop Navigation */}

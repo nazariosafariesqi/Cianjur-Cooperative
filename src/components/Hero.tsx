@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Koperasi Cianjur - Bersama Membangun Kesejahteraan"
+          alt="Koperasi Sugih Jembar Rahayu - Bersama Membangun Kesejahteraan"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent/90 via-accent/70 to-transparent" />
@@ -24,11 +24,11 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Koperasi Cianjur
+          <h1 className="text-5xl md:text-5xl font-bold text-primary-foreground mb-4 leading-tight">
+            Bersama Membangun Kesejahteraan
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-semibold">
-            Bersama Membangun Kesejahteraan
+            
           </p>
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl">
             Bergabunglah dengan koperasi terpercaya di Cianjur. Kami berkomitmen

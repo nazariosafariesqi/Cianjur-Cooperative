@@ -6,7 +6,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Alamat",
-      content: "Jl. Ir. H. Juanda No. 123, Cianjur, Jawa Barat 43211"
+      content: "Kp. Bangbayang, RT 001, RW 003, Desa Cikancana, Kecamatan Sukaresmi,Kabupaten Cianjur, Provinsi Jawa Barat"
     },
     {
       icon: Phone,
