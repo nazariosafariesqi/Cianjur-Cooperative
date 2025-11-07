@@ -4,11 +4,9 @@ import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { name: "Beranda", href: "#hero" },
+  { name: "Beranda", href: "/" },
   { name: "Tentang", href: "/tentang" },
-  { name: "Layanan", href: "#services" },
-  { name: "Keanggotaan", href: "#membership" },
-  { name: "Berita", href: "#newsletter" },
+  { name: "Layanan", href: "/layanan" },
   { name: "Kontak", href: "#contact" },
 ];
 
