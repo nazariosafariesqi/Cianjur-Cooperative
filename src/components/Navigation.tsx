@@ -32,7 +32,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="text-xl md:text-2xl font-bold text-gradient">
+          <div className="font-inter text-xl md:text-2xl font-bold text-gradient">
             Koperasi Sugih Jembar Rahayu
           </div>
 
@@ -71,10 +71,10 @@ const Navigation = () => {
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`inline-block px-4 py-2 border-b transition-all duration-300 mx-auto ${
+                  className={`px-4 py-2 border-b-2 transition-all duration-300 ${
                     location.pathname === item.href
-                      ? "border-primary text-foreground"
-                      : "border-transparent text-muted-foreground hover:text-foreground"
+                      ? "border-primary text-black"
+                      : "border-transparent text-black hover:text-black/70"
                   }`}
                 >
                   {item.name}
