@@ -15,8 +15,8 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Koperasi Sugih Jembar Rahayu - Bersama Membangun Kesejahteraan"
-          className="w-full h-full object-cover"
+          alt="Koperasi Sugih Jembar Rahayu"
+          className="absolute bottom-0 right-0 w-[500px] h-auto object-contain opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent/90 via-accent/70 to-transparent" />
       </div>
@@ -27,9 +27,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-5xl font-bold text-primary-foreground mb-4 leading-tight">
             Bersama Membangun Kesejahteraan
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-semibold">
-            
-          </p>
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-semibold"></p>
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl">
             Bergabunglah dengan koperasi terpercaya di Cianjur. Kami berkomitmen
             untuk meningkatkan kesejahteraan anggota melalui layanan keuangan
@@ -38,7 +36,11 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <Button variant="hero" size="lg" onClick={() => navigate("/kontak")}>
+            <Button
+              variant="hero"
+              size="lg"
+              onClick={() => navigate("/kontak")}
+            >
               Daftar Sekarang
               <ArrowRight className="ml-2" />
             </Button>
@@ -62,7 +64,10 @@ const Hero = () => {
                 Tahun Berpengalaman
               </div>
             </div>
-            <div className="text-center animate-scale-in" style={{ animationDelay: "0.1s" }}>
+            <div
+              className="text-center animate-scale-in"
+              style={{ animationDelay: "0.1s" }}
+            >
               <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
                 5000+
               </div>
@@ -70,7 +75,10 @@ const Hero = () => {
                 Anggota Aktif
               </div>
             </div>
-            <div className="text-center animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            <div
+              className="text-center animate-scale-in"
+              style={{ animationDelay: "0.2s" }}
+            >
               <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
                 50M+
               </div>
