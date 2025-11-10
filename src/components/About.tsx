@@ -1,105 +1,154 @@
 import aboutImage from "@/assets/about-koperasi.jpg";
-import { CheckCircle2 } from "lucide-react";
+import logoImage from "@/assets/logo-koperasi.jpg"; // pastikan file logo tersedia
+import { Star, Target } from "lucide-react";
 
 const About = () => {
-  const values = [
-    "Transparansi dalam setiap transaksi",
-    "Kesejahteraan bersama anggota",
-    "Profesional dan terpercaya",
-    "Berbasis kearifan lokal",
-  ];
-
-  const missions = [
-    "Memproduksi barang berdaya saing tinggi dan berkualitas ekspor",
-    "Menyediakan peralatan dan bahan-bahan yang dibutuhkan untuk memproduksi barang",
-    "Menampung hasil produksi anggota, menyempurnakannya, dan mendistribusikannya",
-  ];
-
-  const goals = [
-    "Meningkatkan kesejahteraan anggota melalui distribusi produk",
-    "Mendukung produksi lokal yang berkelanjutan",
-    "Membuka akses pasar dalam dan luar negeri bagi anggota",
-  ];
-
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-muted">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <div className="animate-slide-up">
-            <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)] hover-lift">
-              <img
-                src={aboutImage}
-                alt="Tim Koperasi Cianjur"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
+    <>
+      {/* Section 1: Gambar Header */}
+      <section className="relative h-[500px] w-full overflow-hidden">
+        <img
+          src={aboutImage}
+          alt="Tentang Koperasi"
+          className="w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/10 to-black/100" />
+        <div className="absolute bottom-12 left-8 z-10 max-w-xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Tentang Kami
+          </h2>
+          <p className="text-lg text-white/90">
+            Kenalan lebih dekat dengan Koperasi Sugih Jembar Rahayu
+          </p>
+        </div>
+      </section>
 
-          {/* Content Section */}
-          <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">Tentang Kami</span>
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Koperasi Cianjur didirikan dengan visi untuk memberdayakan masyarakat melalui sistem keuangan yang adil dan berkelanjutan. Sejak tahun 2008, kami telah melayani ribuan anggota dengan komitmen penuh terhadap transparansi dan kesejahteraan bersama.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Kami percaya bahwa kekuatan sejati terletak pada gotong royong dan kepercayaan. Setiap keputusan kami diambil dengan mempertimbangkan kepentingan seluruh anggota, bukan hanya keuntungan semata.
-            </p>
-
-            {/* Values List */}
-            <div className="space-y-4 mb-10">
-              <h3 className="text-xl font-semibold mb-4">Nilai-Nilai Kami:</h3>
-              {values.map((value, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 animate-fade-in"
-                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-                >
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{value}</span>
-                </div>
-              ))}
-            </div>
-
+      {/* Section 2: Visi & Misi */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12">
             {/* Visi */}
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-2">Visi</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Menjadi koperasi produksi yang mampu memproduksi dan/atau menampung hasil produksi anggota, serta mendistribusikan produk baik dalam negeri maupun luar negeri untuk kesejahteraan anggota.
-              </p>
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+              <div className="flex items-start gap-4">
+                <Star className="w-10 h-10 text-yellow-400 flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">Visi</h3>
+                  <p className="text-black/80 leading-relaxed">
+                    Menjadi koperasi produksi yang mampu memberikan manfaat bagi
+                    anggota dan masyarakat sekitar, serta menjadi koperasi yang
+                    mandiri dan profesional dalam pengelolaannya.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Misi */}
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4">Misi</h3>
-              <ul className="space-y-3 text-muted-foreground list-none">
-                {missions.map((mission, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
-                    <span>{mission}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Tujuan */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Tujuan</h3>
-              <ul className="space-y-3 text-muted-foreground list-none">
-                {goals.map((goal, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
-                    <span>{goal}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+              <div className="flex items-start gap-4">
+                <Target className="w-10 h-10 text-red-500 flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">Misi</h3>
+                  <ul className="space-y-2 text-black/80 list-disc pl-4">
+                    <li>
+                      Memproduksi barang-barang seefisien mungkin kualitasnya.
+                    </li>
+                    <li>
+                      Menyediakan peralatan dan bahan-bahan yang diperlukan
+                      dalam usaha.
+                    </li>
+                    <li>
+                      Menampung hasil produksi anggota, memasarkan, dan
+                      mendistribusikannya.
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Section 3: Arti Logo */}
+      <section className="py-20 bg-green-500">
+        <div className="container mx-auto px-4">
+          {/* Judul Tengah */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              Arti Logo
+            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Arti kiasan Logo Koperasi Sugih Jembar Rahayu
+            </h2>
+          </div>
+
+          {/* Konten Dua Kolom */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Logo di kiri */}
+            <div className="flex justify-center">
+              <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <img
+                  src={logoImage}
+                  alt="Logo Koperasi Sugih Jembar Rahayu"
+                  className="w-[300px] h-auto"
+                />
+              </div>
+            </div>
+
+            {/* Arti Kiasan di kanan */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Arti Kiasan
+              </h3>
+              <p className="text-white leading-relaxed">
+                Logo Koperasi Sugih Jembar Rahayu menggambarkan semangat
+                kebersamaan, pertumbuhan, dan keberlanjutan. Bentuk manusia yang
+                terbuka melambangkan keterlibatan aktif anggota, sedangkan
+                elemen daun dan warna hijau menunjukkan komitmen terhadap
+                kearifan lokal dan kesejahteraan lingkungan.
+              </p>
+              <p className="text-white leading-relaxed mt-4">
+                Setiap elemen dalam logo memiliki makna simbolik: gerakan
+                melingkar mencerminkan gotong royong, warna biru melambangkan
+                kepercayaan, dan bentuk dinamis menunjukkan adaptabilitas
+                koperasi dalam menghadapi tantangan zaman.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          {/* Judul Tengah */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
+              Struktur Organisasi
+            </h2>
+            <p className="text-lg text-black/70">
+              Susunan Pengurus Koperasi Sugih Jembar Rahayu
+            </p>
+          </div>
+
+          {/* Grid Struktur */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <div
+                key={index}
+                className="bg-green-50 p-6 rounded-xl shadow-md text-center border border-gray-200"
+              >
+                {/* Placeholder Icon */}
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-green-200 flex items-center justify-center">
+                  <span className="text-4xl">👤</span>
+                </div>
+                {/* Nama & Jabatan */}
+                <h3 className="text-xl font-semibold text-black mb-1">Nama</h3>
+                <p className="text-black/70">Jabatan</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
