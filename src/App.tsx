@@ -9,9 +9,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServicesPage from "@/pages/Services";
 import HomePage from "@/pages/Home";
+import KegiatanPage from "./pages/Kegiatan";
 import ContactPage from "@/pages/Contact";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-
 
 const queryClient = new QueryClient();
 
@@ -21,17 +21,18 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-      <Navigation />
+        <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tentang" element={<AboutPage />} />
           <Route path="/layanan" element={<ServicesPage />} />
+          <Route path="/kegiatan" element={<KegiatanPage />} />
           <Route path="/kontak" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         </Routes>
-      <Footer />
-      <FloatingWhatsApp />
+        <Footer />
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

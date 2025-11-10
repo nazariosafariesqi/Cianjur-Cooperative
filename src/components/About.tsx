@@ -1,5 +1,5 @@
 import aboutImage from "@/assets/about-koperasi.jpg";
-import logoImage from "@/assets/logo-koperasi.jpg"; // pastikan file logo tersedia
+import logoImage from "@/assets/logo-koperasi.jpg";
 import { Star, Target } from "lucide-react";
 
 const About = () => {
