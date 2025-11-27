@@ -6,23 +6,24 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Alamat",
-      content: "Kp. Bangbayang, RT 001, RW 003, Desa Cikancana, Kecamatan Sukaresmi,Kabupaten Cianjur, Provinsi Jawa Barat"
+      content:
+        "Kp. Bangbayang, RT 001, RW 003, Desa Cikancana, Kecamatan Sukaresmi,Kabupaten Cianjur, Provinsi Jawa Barat",
     },
     {
       icon: Phone,
       title: "Telepon",
-      content: "+62 263 123 4567"
+      content: "+62 263 123 4567",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@koperasicianjur.co.id"
+      content: "info@koperasicianjur.co.id",
     },
     {
       icon: Clock,
       title: "Jam Operasional",
-      content: "Senin - Jumat: 08:00 - 16:00 WIB"
-    }
+      content: "Senin - Jumat: 08:00 - 16:00 WIB",
+    },
   ];
 
   return (
